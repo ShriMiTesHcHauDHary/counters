@@ -1,0 +1,24 @@
+querySelector() Method: The querySelector() method returns the first element within the document which matches a specified CSS selector(s). If multiple elements occurs, then it returns the result for only the first matching element.
+Syntax:
+document.querySelector(selectors);
+It returns the first element which matches the selector.
+
+querySelectorAll() Method: The querySelectorAll()method returns all the elements within the document which matches the specified CSS selector(s). It returns all the elements that matches with the selector in the form of a static NodeList object which is a collection of nodes. To access each element, we usually use a loop. Each element can be accessed via an index. The index starts with 0. The property length can be used to get the number of elements that matches the specified selector.
+syntax:
+document.querySelectorAll(selectors)
+
+<span id="value">0</span>  id value is almost equal to output
+
+btns.forEach(function (btn) {   to access all the button at once parse into array in nodelist with help of foreach method so that after that we can access them all with event object "e" in addEventListener
+btn.addEventListener('click', function(e){  
+    let style = e.currentTarget.classList  class list is about list of value it give after diff clicks
+    if(style.contains("decrease")){
+        count --;
+    }else if(style.contains("increase")){
+        count ++;
+    }else{
+         count = 0
+    }
+    value.textContent = count;
+})
+})
